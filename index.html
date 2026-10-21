@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Course Planner Assistant</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">UCSI student project demo</p>
+        <h1>Smart Course Planner Assistant</h1>
+        <p class="intro">Plan your next semester with prerequisite and timetable checks.</p>
+      </div>
+      <button id="reset-button" class="secondary">Reset demo</button>
+    </header>
+
+    <main>
+      <p class="notice"><strong>Demo data only:</strong> course information and timetable slots are illustrative. Confirm current requirements and offerings with your faculty before registration.</p>
+
+      <section class="panel profile-panel" aria-labelledby="profile-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Step 1</p>
+            <h2 id="profile-title">Your completed courses</h2>
+          </div>
+          <span id="progress-label" class="badge">0 completed</span>
+        </div>
+        <p>Select every course you have completed. Your choices are stored only in this browser.</p>
+        <div id="completed-course-list" class="check-grid"></div>
+      </section>
+
+      <section class="panel" aria-labelledby="catalogue-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Step 2</p>
+            <h2 id="catalogue-title">Course catalogue</h2>
+          </div>
+          <label class="search-label">Search <input id="search-input" type="search" placeholder="Code or course name" /></label>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Course</th><th>Credits</th><th>Offering</th><th>Prerequisites</th><th>Status</th><th></th></tr></thead>
+            <tbody id="catalogue-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="planner-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Step 3</p>
+            <h2 id="planner-title">Next-semester plan</h2>
+          </div>
+          <div class="button-row">
+            <button id="generate-button">Generate feasible plan</button>
+            <button id="export-button" class="secondary">Export .ics</button>
+          </div>
+        </div>
+        <p id="planner-message" class="planner-message" aria-live="polite">Select eligible courses from the catalogue, or generate a plan automatically.</p>
+        <div class="plan-summary"><span id="course-count">0 courses</span><span id="credit-count">0 credits</span><span id="conflict-count">No timetable conflicts</span></div>
+        <div id="selected-course-list" class="selected-list"></div>
+      </section>
+    </main>
+    <footer>Built as a proof-of-concept for BIC2263 Software Project Management.</footer>
+    <script src="app.js"></script>
+  </body>
+</html>
