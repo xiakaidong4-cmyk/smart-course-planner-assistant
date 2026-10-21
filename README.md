@@ -2,6 +2,10 @@
 
 A lightweight, front-end proof of concept for the BIC2263 Software Project Management solo project. It helps undergraduate students record completed courses, check prerequisite relationships, see course offering frequency, build a conflict-free next-semester plan, and export that plan as an iCalendar file.
 
+## Project planning
+
+The complete planning document is available in [PRD.md](PRD.md). It includes the product scope, user stories, success measures, delivery roadmap, tools, and proposed production tech stack.
+
 ## Run locally
 
 Open `index.html` in a modern browser. No package installation or server is required.
@@ -14,6 +18,15 @@ Open `index.html` in a modern browser. No package installation or server is requ
 - Manual course add/remove controls
 - Timetable clash detection
 - `.ics` calendar export
+
+## Preliminary build
+
+The initial build is a responsive, browser-only MVP built with HTML, CSS, and JavaScript. It demonstrates the core planning flow without requiring a server or an account:
+
+1. Mark courses as completed.
+2. View prerequisite eligibility and offering frequency.
+3. Add eligible courses manually or generate a conflict-free plan.
+4. Review clashes and export the schedule as an `.ics` calendar file.
 
 ## Important data limitation
 
